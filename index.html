@@ -328,6 +328,61 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-手串珠色" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/clearSky.github.io/2019/04/11/手串珠色/" class="article-date">
+      <time datetime="2019-04-11T00:14:59.000Z" itemprop="datePublished">2019-04-11</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/clearSky.github.io/2019/04/11/手串珠色/">手串珠色</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>作为一个手串艺人，有金主向你订购了一条包含n个杂色串珠的手串——每个串珠要么无色，要么涂了若干种颜色。为了使手串的色彩看起来不那么单调，金主要求，手串上的任意一种颜色（不包含无色），在任意连续的m个串珠里至多出现一次（注意这里手串是一个环形）。手串上的颜色一共有c种。现在按顺时针序告诉你n个串珠的手串上，每个串珠用所包含的颜色分别有哪些。请你判断该手串上有多少种颜色不符合要求。即询问有多少种颜色在任意连续m个串珠中出现了至少两次。<br>‘’’ruby<br>import java.util.*;<br>public class Main{<br>    public static void main(String[] args){<br>        Map&lt;Integer,List<integer>&gt; map = new HashMap&lt;&gt;();<br>        Scanner s = new Scanner(System.in);<br>        int n,m,c;<br>        n = s.nextInt();<br>        m = s.nextInt();<br>        c = s.nextInt();<br>        for(int i = 0;i &lt; n;i++){<br>            int num_i = s.nextInt();<br>            for(int j = 0;j&lt;num_i;j++){<br>                int key = s.nextInt();<br>                if(map.containsKey(key)){<br>                    List<integer> list = map.get(key);<br>                    list.add(i);<br>                }else{<br>                    List<integer> list = new ArrayList&lt;&gt;();<br>                    list.add(i);<br>                    map.put(key,list);<br>                }<br>            }<br>        }<br>        int sum = 0;<br>        boolean work;<br>        for(int i = 1;i &lt;= c;i++){<br>            work = true;<br>            List<integer> list = map.get(i);<br>            if(list.size() &lt;= 1){<br>                continue;<br>            }else{<br>                for(int j = 0;j&lt;list.size() - 1;j++){<br>                    if(list.get(j)+m&gt;list.get(j+1)){<br>                        sum++;<br>                        work = false;<br>                        break;<br>                    }<br>                }<br>                if(work &amp;&amp; n-list.get(list.size()-1)+list.get(0)&lt;m)<br>                    sum++;<br>            }<br>        }<br>        System.out.println(sum);<br>    }<br>}<br>‘’’</integer></integer></integer></integer></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-中位数查找" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
