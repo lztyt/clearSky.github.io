@@ -3,19 +3,19 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>两个有序数组的中位数查找 | </title>
+  <title>空格的替换 | </title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="###寻找2个有序数组的中位数  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + &amp;gt;n))。你可以假设 nums1 和 nums2 不会同时为空。示例 1:nums1 = [1, 3]nums2 = [2]则中位数是 2.0示例 2:nums1 = [1, 2]nums2 = [3, 4]则中">
+  <meta name="description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后&amp;gt;的字符串为We%20Are%20Happy。123456789101112131415public class Solution &amp;#123;    public String replaceSpace(StringBuffer str) &amp;#123;        Stri">
 <meta property="og:type" content="article">
-<meta property="og:title" content="两个有序数组的中位数查找">
-<meta property="og:url" content="https://lztyt.github.io/clearSky.github.io/2019/04/10/中位数查找/index.html">
+<meta property="og:title" content="空格的替换">
+<meta property="og:url" content="https://lztyt.github.io/clearSky.github.io/2019/04/16/空格的替换/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="###寻找2个有序数组的中位数  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + &amp;gt;n))。你可以假设 nums1 和 nums2 不会同时为空。示例 1:nums1 = [1, 3]nums2 = [2]则中位数是 2.0示例 2:nums1 = [1, 2]nums2 = [3, 4]则中">
+<meta property="og:description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后&amp;gt;的字符串为We%20Are%20Happy。123456789101112131415public class Solution &amp;#123;    public String replaceSpace(StringBuffer str) &amp;#123;        Stri">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-04-11T00:47:43.750Z">
+<meta property="og:updated_time" content="2019-04-16T03:16:38.907Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="两个有序数组的中位数查找">
-<meta name="twitter:description" content="###寻找2个有序数组的中位数  给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + &amp;gt;n))。你可以假设 nums1 和 nums2 不会同时为空。示例 1:nums1 = [1, 3]nums2 = [2]则中位数是 2.0示例 2:nums1 = [1, 2]nums2 = [3, 4]则中">
+<meta name="twitter:title" content="空格的替换">
+<meta name="twitter:description" content="请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后&amp;gt;的字符串为We%20Are%20Happy。123456789101112131415public class Solution &amp;#123;    public String replaceSpace(StringBuffer str) &amp;#123;        Stri">
   
     <link rel="alternative" href="/atom.xml" title type="application/atom+xml">
   
@@ -327,11 +327,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-中位数查找" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-空格的替换" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/clearSky.github.io/2019/04/10/中位数查找/" class="article-date">
-      <time datetime="2019-04-10T11:37:51.852Z" itemprop="datePublished">2019-04-10</time>
+      <a href="/clearSky.github.io/2019/04/16/空格的替换/" class="article-date">
+      <time datetime="2019-04-16T03:14:47.000Z" itemprop="datePublished">2019-04-16</time>
 </a>
     </div>
   
@@ -344,7 +344,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      两个有序数组的中位数查找
+      空格的替换
     </h1>
   
 
@@ -361,11 +361,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>###寻找2个有序数组的中位数</p>
-<blockquote>
-<p>给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。<br>请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + &gt;n))。你可以假设 nums1 和 nums2 不会同时为空。<br>示例 1:<br>nums1 = [1, 3]<br>nums2 = [2]<br>则中位数是 2.0<br>示例 2:nums1 = [1, 2]<br>nums2 = [3, 4]<br>则中位数是 (2 + 3)/2 = 2.5</p>
+        <blockquote>
+<p>请实现一个函数，将一个字符串中的每个空格替换成“%20”。例如，当字符串为We Are Happy.则经过替换之后&gt;的字符串为We%20Are%20Happy。<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">public <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    public String replaceSpace(StringBuffer str) &#123;</span><br><span class="line">        String sti=str.toString();</span><br><span class="line">        char []strChar=sti.toCharArray();</span><br><span class="line">        StringBuffer out =new StringBuffer();</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">for</span>(int i=<span class="number">0</span>;i&lt;strChar.length;i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(strChar[i]==<span class="string">' '</span>)</span><br><span class="line">                out.append(<span class="string">"%20"</span>);</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                out.append(strChar[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> out.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<p>###java原码<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    public double findMedianSortedArrays(int[] nums1, int[] nums2) &#123;</span><br><span class="line">        int[] A = nums1;</span><br><span class="line">        int[] B = nums2;</span><br><span class="line">        int m = A.length;</span><br><span class="line">        int n = B.length;</span><br><span class="line">        <span class="keyword">if</span>(m&gt;n)&#123;</span><br><span class="line">            int[] temp = A;</span><br><span class="line">            A = B;</span><br><span class="line">            B = temp;</span><br><span class="line">            m = A.length;</span><br><span class="line">            n = B.length;</span><br><span class="line">        &#125;</span><br><span class="line">        int iMin = <span class="number">0</span>;</span><br><span class="line">        int iMax = m;</span><br><span class="line">        int halfLen = (m+n+<span class="number">1</span>)/<span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span>(iMin&lt;=iMax)&#123;</span><br><span class="line">            int i =  (iMin+iMax)/<span class="number">2</span>;</span><br><span class="line">            int j = halfLen-i;</span><br><span class="line">            <span class="keyword">if</span>(i &lt; iMax &amp;&amp; B[j-<span class="number">1</span>] &gt; A[i])&#123;</span><br><span class="line">                iMin = i + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span>(i &gt; iMin &amp;&amp; A[i-<span class="number">1</span>] &gt; B[j])&#123;</span><br><span class="line">                iMax = i -<span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                int maxLeft = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == <span class="number">0</span> )</span><br><span class="line">                    maxLeft = B[j-<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j == <span class="number">0</span> )</span><br><span class="line">                    maxLeft = A[m-<span class="number">1</span>];</span><br><span class="line">                <span class="keyword">else</span></span><br><span class="line">                    maxLeft = Math.max(A[i-<span class="number">1</span>],B[j-<span class="number">1</span>]);</span><br><span class="line">                <span class="keyword">if</span>((m+n)%<span class="number">2</span> == <span class="number">1</span>)</span><br><span class="line">                    <span class="keyword">return</span> maxLeft;</span><br><span class="line">                int minRight = <span class="number">0</span>;</span><br><span class="line">                <span class="keyword">if</span>(i == m)</span><br><span class="line">                    minRight = B[j];</span><br><span class="line">                <span class="keyword">else</span> <span class="keyword">if</span>(j == n)</span><br><span class="line">                    minRight = A[<span class="number">0</span>];</span><br><span class="line">                <span class="keyword">else</span> </span><br><span class="line">                    minRight = Math.min(B[j],A[i]);</span><br><span class="line">                <span class="keyword">return</span> (maxLeft+minRight)/<span class="number">2.0</span>;</span><br><span class="line">                </span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>.<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
       
@@ -411,13 +409,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/clearSky.github.io/2019/04/10/中位数查找/">两个有序数组的中位数查找</a></p>
+        <p><span>本文标题:</span><a href="/clearSky.github.io/2019/04/16/空格的替换/">空格的替换</a></p>
         <p><span>文章作者:</span><a href="/clearSky.github.io/" title="访问 lztyt 的个人博客">lztyt</a></p>
-        <p><span>发布时间:</span>2019年04月10日 - 19时37分</p>
-        <p><span>最后更新:</span>2019年04月11日 - 08时47分</p>
+        <p><span>发布时间:</span>2019年04月16日 - 11时14分</p>
+        <p><span>最后更新:</span>2019年04月16日 - 11时16分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/clearSky.github.io/2019/04/10/中位数查找/" title="两个有序数组的中位数查找">https://lztyt.github.io/clearSky.github.io/2019/04/10/中位数查找/</a>
-            <span class="copy-path" data-clipboard-text="原文: https://lztyt.github.io/clearSky.github.io/2019/04/10/中位数查找/　　作者: lztyt" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/clearSky.github.io/2019/04/16/空格的替换/" title="空格的替换">https://lztyt.github.io/clearSky.github.io/2019/04/16/空格的替换/</a>
+            <span class="copy-path" data-clipboard-text="原文: https://lztyt.github.io/clearSky.github.io/2019/04/16/空格的替换/　　作者: lztyt" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/clearSky.github.io/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -430,15 +428,11 @@
 
 <nav id="article-nav">
   
-    <a href="/clearSky.github.io/2019/04/11/手串珠色/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          手串珠色
-        
-      </div>
-    </a>
   
+    <a href="/clearSky.github.io/2019/04/11/手串珠色/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">手串珠色</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -514,13 +508,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/clearSky.github.io/2019/04/11/手串珠色/" title="上一篇: 手串珠色">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/clearSky.github.io/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/clearSky.github.io/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/clearSky.github.io/2019/04/11/手串珠色/" title="下一篇: 手串珠色">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/clearSky.github.io/2019/04/16/空格的替换/">空格的替换</a></li><li class="post-list-item"><a class="post-list-link" href="/clearSky.github.io/2019/04/11/手串珠色/">手串珠色</a></li><li class="post-list-item"><a class="post-list-link" href="/clearSky.github.io/2019/04/10/中位数查找/">两个有序数组的中位数查找</a></li></ul>
