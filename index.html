@@ -328,6 +328,70 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-行程和用户" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/clearSky.github.io/2019/05/30/行程和用户/" class="article-date">
+      <time datetime="2019-05-30T06:21:32.000Z" itemprop="datePublished">2019-05-30</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/clearSky.github.io/2019/05/30/行程和用户/">&#39;行程和用户&#39;</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>###题目</p>
+<blockquote>
+<p>Trips 表中存所有出租车的行程信息。每段行程有唯一键 Id，Client_Id 和 Driver_Id 是 Users 表中 Users_Id 的外键。Status 是枚举类型，枚举成员为 (‘completed’, ‘cancelled_by_driver’, ‘cancelled_by_client’)。</p>
+</blockquote>
+<p>+—-+———–+———–+———+——————–+———-+<br>| Id | Client_Id | Driver_Id | City_Id |        Status      |Request_at|<br>+—-+———–+———–+———+——————–+———-+<br>| 1  |     1     |    10     |    1    |     completed      |2013-10-01|<br>| 2  |     2     |    11     |    1    | cancelled_by_driver|2013-10-01|<br>| 3  |     3     |    12     |    6    |     completed      |2013-10-01|<br>| 4  |     4     |    13     |    6    | cancelled_by_client|2013-10-01|<br>| 5  |     1     |    10     |    1    |     completed      |2013-10-02|<br>| 6  |     2     |    11     |    6    |     completed      |2013-10-02|<br>| 7  |     3     |    12     |    6    |     completed      |2013-10-02|<br>| 8  |     2     |    12     |    12   |     completed      |2013-10-03|<br>| 9  |     3     |    10     |    12   |     completed      |2013-10-03|<br>| 10 |     4     |    13     |    12   | cancelled_by_driver|2013-10-03|<br>+—-+———–+———–+———+——————–+———-+</p>
+<p>Users 表存所有用户。每个用户有唯一键 Users_Id。Banned 表示这个用户是否被禁止，Role 则是一个表示（‘client’, ‘driver’, ‘partner’）的枚举类型。</p>
+<p>+———-+——–+——–+<br>| Users_Id | Banned |  Role  |<br>+———-+——–+——–+<br>|    1     |   No   | client |<br>|    2     |   Yes  | client |<br>|    3     |   No   | client |<br>|    4     |   No   | client |<br>|    10    |   No   | driver |<br>|    11    |   No   | driver |<br>|    12    |   No   | driver |<br>|    13    |   No   | driver |<br>+———-+——–+——–+</p>
+<p>写一段 SQL 语句查出 2013年10月1日 至 2013年10月3日 期间非禁止用户的取消率。基于上表，你的 SQL 语句应返回如下结果，取消率（Cancellation Rate）保留两位小数。</p>
+<p>+————+——————-+<br>|     Day    | Cancellation Rate |<br>+————+——————-+<br>| 2013-10-01 |       0.33        |<br>| 2013-10-02 |       0.00        |<br>| 2013-10-03 |       0.50        |<br>+————+——————-+</p>
+<p>###代码<br><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	a.Request_at AS DAY,</span><br><span class="line">	ROUND( sum( CASE WHEN a.STATUS != <span class="string">"completed"</span> THEN <span class="number">1</span> ELSE <span class="number">0</span> <span class="keyword">END</span> ) / count( a.id ), <span class="number">2</span> ) AS <span class="string">"Cancellation Rate"</span></span><br><span class="line">FROM</span><br><span class="line">	Trips a</span><br><span class="line">	LEFT JOIN Users b ON a.client_id = b.users_id </span><br><span class="line">WHERE</span><br><span class="line">	b.Banned = <span class="string">"No"</span> </span><br><span class="line">	AND a.Request_at BETWEEN <span class="string">"2013-10-01"</span> </span><br><span class="line">	AND <span class="string">"2013-10-03"</span> </span><br><span class="line">GROUP BY</span><br><span class="line">	a.Request_at</span><br></pre></td></tr></table></figure></p>
+
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-超级蛙跳" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
